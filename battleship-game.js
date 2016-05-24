@@ -141,12 +141,13 @@ var controller = {
 	   If a hit was made and all ships were sunk, then return results #gameover
 	*/
 	processGuess: function(guess) {
-		var location = parseGuess(guess);		
-		if (location) {
+		var loc = parseGuess(guess);		
+		if (loc) {
 			this.guesses++;
 			console.log(this.guesses);
 			if (this.isGameOver(guess)) {
 				alert("You sank all my battleships in " + this.guesses + " guesses.");
+				location.reload();
 			}
 		}
 	},
