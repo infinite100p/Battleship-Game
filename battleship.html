@@ -16,61 +16,72 @@ div#ocean {
 	width: 850px;
 	margin: auto;
 	background: url("board.jpg") no-repeat;
-
-	/*border: solid 2px pink; */
-
+	background-size: 95%;
 }
 
 div#messageArea {
 	position: absolute;
-	top: 5%;
-	left: 32%;
+	top: 3%;
+	left: 31%;
 	color: rgb(83, 175, 19);
-	font-size: 2em;
+	font-size: 1.1em;
 	font-weight: bold;
 }
 
 table {
 	position: absolute;
-    left: 173px;
-    top: 98px;
-    border-spacing: 0px;
-    /*border: solid 2px pink; */
+    left: 135px;
+    top: 75px;
+    border-spacing: 0px;   
 }
 
 td {
-    width: 94px;
-    height: 94px;
+    width: 74px;
+    height: 74px;
 }
+
+/*94*/
 
 form {
 	position: absolute;
-	top: 850px;
-	right: 100px;
+	top: 675px;
+	right: 264px;
 	background-color: rgb(83, 175, 19);
-	padding: 15px;
+	padding: 8px;
 }
+
 
 form input {
 	background-color: rgb(152, 207, 113);
 	border-color: rgb(83, 175, 19);
 	font-size: 2em;
+	height: 25px;
+	font-size: 1.5em;
+}
+
+
+form #fireButton {
+	height: 35px;
+	font-size: 1.5em;
 }
 
 .hit {
     background: url("ship.png") no-repeat center center;
+    background-size: 90%;
 }
 
 .miss {
     background: url("miss.png") no-repeat center center;
+    background-size: 90%;
 }
 
 </style>
 </head>
 
+
 <body>
 <div id="ocean">
-<div id="messageArea">Let's begin! Enter a position below. </div>
+<div id="messageArea">Let's begin! Aim for the battleships. </div>
 <table id ="board">
 <tr>
 	<td id="00"></td><td id="01"></td><td id="02"></td><td id="03"></td><td id="04"></td><td id="05"></td><td id="06"></td>
@@ -95,12 +106,13 @@ form input {
 </tr>
 </table>
 
+
 <form>
 	<input type="text" id="guessInput" placeholder="A0">
 	<input type="button" id="fireButton" value="Fire!">
 </form>
 </div>
 
-<script src="battleship.js"></script>
+<script src="battleship-game.js"></script>
 </body>
 </html>
