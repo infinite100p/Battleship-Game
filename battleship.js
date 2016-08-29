@@ -132,13 +132,13 @@ var model = {
 		return false;
 },
 
-
+/*
 	// get id of the target element that is clicked on
 	listenForBoardClicks: function() {
 		var cell = document.getElementById('board');
 		cell.addEventListener('click', handleBoardClick);
-	//	});
 	},
+	*/
 
 	// check if ship is sunk
 	isSunk: function(ship) {
@@ -324,5 +324,7 @@ console.log(withinBounds(66));
 console.log(withinBounds(99));
 
 console.log(model.getId());
+
+}
 */
 
