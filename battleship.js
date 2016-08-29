@@ -5,8 +5,7 @@ var view = {
 	displayMessage: function(msg) {
 		var messageArea = document.getElementById("messageArea");
 		messageArea.innerHTML = msg;
-		//messageArea.style.left = "50%";
-		centerMsg("50%");
+		centerMsg("42%");
 	},
 
 	displayHit: function(location) {
@@ -119,7 +118,7 @@ var model = {
 
 				if (this.isSunk(ship)) {
 					view.displayMessage("You sank my battleship!");
-					centerMsg("40%");
+					centerMsg("37%");
 					this.shipsSunk++;
 				}
 				return true;
@@ -324,7 +323,5 @@ console.log(withinBounds(66));
 console.log(withinBounds(99));
 
 console.log(model.getId());
-
 }
 */
-
