@@ -167,8 +167,8 @@ var controller = {
 			this.guesses++;
 			console.log(this.guesses);
 			if (this.isGameOver(guess)) {
-				alert("You sank all my battleships in " + this.guesses + " guesses.");
-				location.reload();
+				setTimeout(gameOver, 100);
+				
 			}
 		}
 	},
@@ -263,7 +263,6 @@ function handleBoardClick(e) {
 }
 
 
-
 // If user hits enter key, button is clicked
 function handleKeyPress(e) {
 	var fireButton = document.getElementById("fireButton");
@@ -272,6 +271,12 @@ function handleKeyPress(e) {
 		fireButton.click();
 		return false;
 	}
+}
+
+/* Alert player on number of guesses & restart game when it ends */
+function gameOver() {
+	alert("You sank all my battleships in " + controller.guesses + " guesses.");
+	location.reload();
 }
 
 
@@ -323,5 +328,6 @@ console.log(withinBounds(66));
 console.log(withinBounds(99));
 
 console.log(model.getId());
+
 }
 */
